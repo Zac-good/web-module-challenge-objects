@@ -20,7 +20,6 @@ function createMenuItem(name, price, category){
     newObject = {name, price, category};
     return newObject;
 }
-console.log(createMenuItem("Taco", 8, "Lunch"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -31,6 +30,7 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+console.log(createMenuItem("Taco", 8, "Lunch"));
 
 
 
@@ -51,7 +51,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(customer){
+    if(customer === 'teacher' || 'student'){
+      return 13.5;
+    } else {
+      return 16.2;
+    }
+
+  }
 }
 
 
@@ -72,7 +79,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews[5]);
 
 
 
@@ -105,11 +112,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, number) {
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
 }
 
-
+console.log(getReviewByIndex());
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
